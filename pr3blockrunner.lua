@@ -1,0 +1,66 @@
+if console_init == 0 then
+  console_init = 1
+  con_b = block
+  con_tp = {}
+  con_gb = {
+    ["a"] = tolua(con_b.getblock(1,1)),
+    ["b"] = tolua(con_b.getblock(2,1)),
+    ["c"] = tolua(con_b.getblock(3,1)),
+    ["d"] = tolua(con_b.getblock(4,1)),
+    ["e"] = tolua(con_b.getblock(5,1)),
+    ["f"] = tolua(con_b.getblock(6,1)),
+    ["g"] = tolua(con_b.getblock(7,1)),
+    ["h"] = tolua(con_b.getblock(8,1)),
+    ["i"] = tolua(con_b.getblock(9,1)),
+    ["j"] = tolua(con_b.getblock(1,2)),
+    ["k"] = tolua(con_b.getblock(2,2)),
+    ["l"] = tolua(con_b.getblock(3,2)),
+    ["m"] = tolua(con_b.getblock(4,2)),
+    ["n"] = tolua(con_b.getblock(5,2)),
+    ["o"] = tolua(con_b.getblock(6,2)),
+    ["p"] = tolua(con_b.getblock(7,2)),
+    ["q"] = tolua(con_b.getblock(8,2)),
+    ["r"] = tolua(con_b.getblock(9,2)),
+    ["s"] = tolua(con_b.getblock(1,3)),
+    ["t"] = tolua(con_b.getblock(2,3)),
+    ["u"] = tolua(con_b.getblock(3,3)),
+    ["v"] = tolua(con_b.getblock(4,3)),
+    ["w"] = tolua(con_b.getblock(5,3)),
+    ["x"] = tolua(con_b.getblock(6,3)),
+    ["y"] = tolua(con_b.getblock(7,3)),
+    ["z"] = tolua(con_b.getblock(8,3)),
+    [" "] = tolua(con_b.getblock(9,3)),
+    ["1"] = tolua(con_b.getblock(1,4)),
+    ["2"] = tolua(con_b.getblock(2,4)),
+    ["3"] = tolua(con_b.getblock(3,4)),
+    ["0"] = tolua(con_b.getblock(4,4)),
+    ["*"] = tolua(con_b.getblock(5,4)),
+    ["."] = tolua(con_b.getblock(6,4)),
+    ["!"] = tolua(con_b.getblock(7,4)),
+    ['"'] = tolua(con_b.getblock(8,4)),
+    ["?"] = tolua(con_b.getblock(9,4)),
+    ["4"] = tolua(con_b.getblock(1,5)),
+    ["5"] = tolua(con_b.getblock(2,5)),
+    ["6"] = tolua(con_b.getblock(3,5)),
+    ["+"] = tolua(con_b.getblock(4,5)),
+    ["/"] = tolua(con_b.getblock(5,5)),
+    [","] = tolua(con_b.getblock(6,5)),
+    [":"] = tolua(con_b.getblock(7,5)),
+    ["("] = tolua(con_b.getblock(8,5)),
+    [")"] = tolua(con_b.getblock(9,5)),
+    ["7"] = tolua(con_b.getblock(1,6)),
+    ["8"] = tolua(con_b.getblock(2,6)),
+    ["9"] = tolua(con_b.getblock(3,6)),
+    ["-"] = tolua(con_b.getblock(4,6)),
+    ["^"] = tolua(con_b.getblock(5,6)),
+    ["="] = tolua(con_b.getblock(6,6)),
+    [";"] = tolua(con_b.getblock(7,6)),
+    ["["] = tolua(con_b.getblock(8,6)),
+    ["]"] = tolua(con_b.getblock(9,6)),
+  }
+  for c_i in pairs(con_gb) do
+    con_tp[c_i] = tolua(con_gb[c_i].teleportto)
+  end
+end
+
+
