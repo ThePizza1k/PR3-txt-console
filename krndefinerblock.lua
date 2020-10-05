@@ -27,13 +27,15 @@ function console_runCode(code)
       else
         console_print("error: target not found")
       end
-    elseif console_comtarg == "krnl"
+    elseif console_comtarg == "krnl" then
       console_print("error: Kernel is already running")
     else
+      console_print("error: target not found")
+    end
   elseif console_command == "del" then
     local console_comtarg = string.sub(code,5,8)
     if console_comtarg == "krnl" then
-      console_print("Removing kernel.")
+      console_print("removing kernel.")
       function console_kernel()
         
       end
