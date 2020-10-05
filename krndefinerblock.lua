@@ -6,7 +6,30 @@ console_valprgmlst = {0,0,0,0,0}
 function console_runCode(code)
   local console_command = string.sub(code,1,3)
   if console_command == "run" then
-    
+    local console_comtarg = string.sub(code,5,8)
+    if console_comtarg == "prgm" then
+      local console_prgtarg = string.sub(code,9,9)
+      if (console_prgtarg == "1") and (console_valprgmlst[1] == 1)  then
+        console_print("running prgm1")
+        console_prgm = 1
+      elseif (console_prgtarg == "2") and (console_valprgmlst[2] == 1) then
+        console_print("running prgm2")
+        console_prgm = 2
+      elseif (console_prgtarg == "3") and (console_valprgmlst[3] == 1) then
+        console_print("running prgm3")
+        console_prgm = 3
+      elseif (console_prgtarg == "4") and (console_valprgmlst[4] == 1) then
+        console_print("running prgm4")
+        console_prgm = 4
+      elseif (console_prgtarg == "5") and (console_valprgmlst[5] == 1) then
+        console_print("running prgm5")
+        console_prgm = 5
+      else
+        console_print("error: target not found")
+      end
+    elseif console_comtarg == "krnl"
+      console_print("error: Kernel is already running")
+    else
   elseif console_command == "del" then
     local console_comtarg = string.sub(code,5,8)
     if console_comtarg == "krnl" then
@@ -23,15 +46,15 @@ function console_runCode(code)
     elseif console_comtarg == "prgm" then
       local console_prgtarg = string.sub(code,9,9)
       if (console_prgtarg == "1") and (console_valprgmlst[1] == 1)  then
-        
-      elseif console_prgtarg == "2" then
-        
-      elseif console_prgtarg == "3" then
-        
-      elseif console_prgtarg == "4" then
-        
-      elseif console_prgtarg == "5" then
-        
+        console_print("deleting prgm1")
+      elseif (console_prgtarg == "2") and (console_valprgmlst[2] == 1) then
+        console_print("deleting prgm2")
+      elseif (console_prgtarg == "3") and (console_valprgmlst[3] == 1) then
+        console_print("deleting prgm3")
+      elseif (console_prgtarg == "4") and (console_valprgmlst[4] == 1) then
+        console_print("deleting prgm4")
+      elseif (console_prgtarg == "5") and (console_valprgmlst[5] == 1) then
+        console_print("deleting prgm5")
       else
         console_print("error: target not found")
       end
